@@ -15,16 +15,16 @@ function LoginPage() {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
 
-  const OnChangeLogin = (e: string) => {
+  const onChangeLogin = (e: string) => {
     console.log(e);
     setLoginId(e);
   };
 
-  const OnChangePassword = (e: string) => {
+  const onChangePassword = (e: string) => {
     setPassword(e);
   };
 
-  const Submit = () => {
+  const submit = () => {
     if (password === "123") {
     }
   };
@@ -38,7 +38,7 @@ function LoginPage() {
         display: "grid",
       }}
       component="form"
-      onSubmit={Submit}
+      onSubmit={submit}
     >
       <Paper elevation={6}>
         <Box m={2} pt={3}>
@@ -48,13 +48,13 @@ function LoginPage() {
           id="LoginID"
           label="Enter ID"
           value={loginId}
-          onChange={OnChangeLogin}
+          onChange={onChangeLogin}
         />
         <LoginBox
           id="PasswordID"
           label="Enter Password"
           value={password}
-          onChange={OnChangePassword}
+          onChange={onChangePassword}
         />
         <Box m={2} pt={1} pb={2}>
           <Grid xs={12} item>
